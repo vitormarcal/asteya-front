@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <InclusaoMovimentacao/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import InclusaoMovimentacao from "./components/InclusaoMovimento";
 
 export default {
   name: 'app',
   components: {
+      InclusaoMovimentacao,
     HelloWorld
   }
 }
