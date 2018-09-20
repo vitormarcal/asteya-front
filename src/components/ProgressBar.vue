@@ -13,6 +13,7 @@
 <script>
     export default {
         name: 'ProgressBar',
+        props: ['step']
     }
 
 </script>
