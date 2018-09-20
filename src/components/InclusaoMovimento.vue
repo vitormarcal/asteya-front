@@ -5,6 +5,8 @@
             <informacao-movimento/>
             <valoracao-movimento/>
             <detalhamento-movimento/>
+            <br/>
+            <progress-bar/>
         </div>
     </div>
 </template>
@@ -13,8 +15,9 @@
     import InformacaoMovimento from "./InformacaoMovimento";
     import ValoracaoMovimento from "./ValoracaoMovimento";
     import DetalhamentoMovimento from "./DetalhamentoMovimento";
+    import ProgressBar from "./ProgressBar";
     export default {
-        components: {DetalhamentoMovimento, ValoracaoMovimento, InformacaoMovimento},
+        components: {ProgressBar, DetalhamentoMovimento, ValoracaoMovimento, InformacaoMovimento},
         data: () => ({
 
         }),
