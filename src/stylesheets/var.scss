@@ -5,10 +5,66 @@ $black: #000000;
 
 $azul-escuro: #14085C;
 $azul-claro: #2B0FEB;
+$azul-1: #205AF5;
+$azul-2: #2E94CA;
 $lilas-claro: #B8ABFF;
 $lilas-escuro: #634EE1;
 $ciano-escuro: #2F88A2;
 $cinza-claro: #e1e1e1;
+
+
+/*Tamanho das fontes*/
+
+$txt-body: 16px;
+$txt-small: 14px;
+$txt-extra-small: 12px;
+$txt-h1: 35px;
+$txt-h2: 20px;
+
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+$lbody: 19px;
+
+/*Buttons*/
+
+.button {
+  transition: all 100ms ease-out;
+  display: inline-block;
+  box-shadow: none;
+  border: 2px solid $azul-1;
+  padding: 9px 15px 6px;
+  text-shadow: none;
+  box-sizing: border-box;
+  font-size: $txt-body;
+  line-height: $lbody;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: $white;
+  background: $azul-claro;
+  height: inherit;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background: $azul-2;
+    border: 2px solid $azul-2;
+  }
+  &:active,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    background: $ciano-escuro;
+    border: 2px solid $ciano-escuro;
+  }
+
+  &.disabled {
+    background: $cinza-claro;
+    border: 2px solid $cinza-claro;
+  }
+}
 
 
 

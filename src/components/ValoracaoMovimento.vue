@@ -1,7 +1,7 @@
 <template>
     <div id="valoracaoMovimento">
-        <button type="button" >VOLTAR</button>
-        <button type="button" >PRÓXIMO</button>
+        <a class="button" >VOLTAR</a>
+        <a class="button" >PRÓXIMO</a>
     </div>
 
 </template>

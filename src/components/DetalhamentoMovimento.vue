@@ -33,8 +33,8 @@
                 <input type="text"/>
             </div>
         </div>
-        <button type="button" >VOLTAR</button>
-        <button type="button" >PRONTO!</button>
+        <a class="button">VOLTAR</a>
+        <a class="button">PRONTO!</a>
     </div>
 
 </template>

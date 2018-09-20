@@ -1,6 +1,6 @@
 <template>
     <div id="informacaoMovimento">
-        <button type="button" >AVANTE</button>
+        <a class="button" >AVANTE</a>
     </div>
 
 </template>
