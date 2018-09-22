@@ -9,28 +9,9 @@
         </div>
 
         <div>
-            <p>Humm, entendi! Está entrando dinheiro na carteira! :)</p>
-            <p>Humm, entendi! Está saindo dinheiro na carteira! :(</p>
-            <br/>
             <div>
                 <p>Uma forma fácil de me lembrar do que se trata este movinento é ...</p>
                 <input id="descricao" type="text"/>
-            </div>
-            <div>
-                <p>O valor deste movimento é...</p>
-                <input type="text" id="valor"/>
-            </div>
-            <div>
-                <p>Esse movimento irá se repetir esta quantidade de vezes </p>
-                <input id="recorrencia" value="1"/>
-            </div>
-            <div>
-                <p>Um item diretamente associado a esta movimentação é </p>
-                <input type="text"/>
-            </div>
-            <div>
-                <p>O meio de pagamento preferido para esta movimentação é </p>
-                <input type="text"/>
             </div>
         </div>
         <a class="button" @click="increase">AVANTE</a>
