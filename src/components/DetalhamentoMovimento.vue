@@ -21,7 +21,7 @@
         name: 'DetalhamentoMovimento',
         data: () => ({
             tag: '',
-            detalhameto: {meioPagamento: {id: undefined, descricao: ''}, item: {id: undefined, descricao: '', tags: []}}
+            detalhameto: {meioPagamento: {id: undefined, descricao: ''}, item: {id: undefined, descricao: ''}, tags: []}
         }),
         methods: {
             addTag() {
@@ -30,11 +30,16 @@
                     this.tag = ''
                 }
             },
+            emit() {
+                this.$emit('detalhameto', this.detalhameto);
+            },
             save() {
-                this.$emit('interface', 4)
+                this.$emit('interface', 4);
+                this.emit();
             },
             decrease() {
-                this.$emit('interface', 2)
+                this.$emit('interface', 2);
+                this.emit();
             },
         }
     }

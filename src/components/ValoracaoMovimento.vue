@@ -27,11 +27,16 @@
             valoracao: {valor: 0, recorrencia: 1}
         }),
         methods: {
+            emit() {
+                this.$emit('valoracao', this.valoracao);
+            },
             increase() {
-                this.$emit('interface', 3)
+                this.$emit('interface', 3);
+                this.emit();
             },
             decrease() {
-                this.$emit('interface', 1)
+                this.$emit('interface', 1);
+                this.emit();
             },
         }
     }

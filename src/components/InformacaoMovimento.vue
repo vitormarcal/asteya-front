@@ -26,7 +26,8 @@
         }),
         methods: {
             increase() {
-                this.$emit('interface', 2)
+                this.$emit('interface', 2);
+                this.$emit('informacao', this.informacao);
             }
         }
     }

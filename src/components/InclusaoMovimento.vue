@@ -4,12 +4,13 @@
         <h1>Inclusão de Movimentação</h1>
             <span v-if="step===4">sucesso</span>
             <span v-else-if="step===5">insucesso</span>
-            <informacao-movimento v-if="step === 1" :step="step" @interface="step = $event"/>
-            <valoracao-movimento v-else-if="step ===2" :step="step" @interface="step = $event"/>
-            <detalhamento-movimento v-else-if="step === 3" :step="step" @interface="step = $event"/>
+            <informacao-movimento v-if="step === 1" :step="step" @interface="step = $event" @informacao="informacao = $event"/>
+            <valoracao-movimento v-else-if="step ===2" :step="step" @interface="step = $event" @valoracao="valoracao = $event"/>
+            <detalhamento-movimento v-else-if="step === 3" :step="step" @interface="step = $event" @detalhamento="detalhamento = $event"/>
             <br/>
             <progress-bar :step="step" @interface="step = $event" />
             <a class="button" @click="save" >Eitr</a>
+            {{movimento}}
         </div>
     </div>
 </template>
@@ -25,10 +26,14 @@
         components: {ProgressBar, DetalhamentoMovimento, ValoracaoMovimento, InformacaoMovimento},
         data: () => ({
             step: 1,
-            movimento: {}
+            movimento: {},
+            informacao: undefined,
+            valoracao: undefined,
+            detalhamento: undefined
         }),
         methods: {
             async save () {
+                Object.assign(this.movimento, this.informacao, this.valoracao, this.detalhameto);
                 const response = await MovimentoService.create(this.movimento);
                 if (response.status >= 200 && response.status < 300) {
                     this.step = 4;
