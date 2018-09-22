@@ -2,9 +2,9 @@
     <div id="progressContainerBar">
 
         <ul class="progressbar">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
+            <li :class="{ active: step === 1 }"></li>
+            <li :class="{ active: step === 2 }"></li>
+            <li :class="{ active: step === 3 }"></li>
         </ul>
 
     </div>

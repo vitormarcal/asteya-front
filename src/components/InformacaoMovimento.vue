@@ -40,14 +40,9 @@
 <script>
     export default {
         name: 'InformacaoMovimento',
-        data: function () {
-            return {
-                moveStep: 2
-            }
-        },
         methods: {
             increase() {
-                this.$emit('interface', this.step)
+                this.$emit('interface', 2)
             }
         }
     }

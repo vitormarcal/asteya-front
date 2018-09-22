@@ -3,10 +3,10 @@
         <div class="card">
         <h1>Inclusão de Movimentação</h1>
             <informacao-movimento v-if="step === 1" :step="step" @interface="step = $event"/>
-            <valoracao-movimento v-else-if="step ===2" :step="step"/>
-            <detalhamento-movimento v-else-if="step === 3" :step="step"/>
+            <valoracao-movimento v-else-if="step ===2" :step="step" @interface="step = $event"/>
+            <detalhamento-movimento v-else-if="step === 3" :step="step" @interface="step = $event"/>
             <br/>
-            <progress-bar :step="step"/>
+            <progress-bar :step="step" @interface="step = $event"/>
         </div>
     </div>
 </template>
